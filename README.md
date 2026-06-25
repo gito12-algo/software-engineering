@@ -1,4 +1,12 @@
-Here is the text converted from your image:
+Software Engineering
+
+These notes have been prepared mainly from the following book:
+
+Software Engineering
+by
+K.K. Aggarwal, Yogesh Singh
+
+Kindly refer above book for more details.
 
 ## Software Life Cycle Models
 ### (1) Waterfall Model
@@ -17,4 +25,251 @@ This model is generally used when:
 | **Coding**               | Building the software and unit testing                                  | Unit tested code                                                   |
 | **Testing**              | Ensuring that requirements are met                                      | Integrated and system tested software                              |
 | **Deployment**           | Assembling, Installation, End-user testing and sign-off by the customer | User Manual                                                        |
+
+### Pros and Cons of Waterfall Model
+
+Pros:
+
+- Simple and systematic model.
+- Follows a disciplined approach.
+
+Cons:
+
+- Not suitable for accommodating any change.
+- Potential delay in identifying the risks.
+- It does not scale up well to large projects.
+## (2) Prototyping Model
+
+This model is generally used when:
+
+- Complete set of requirements is not available.
+- Development with an initial set of requirements is started.
+- Feel of the product with initial requirements is expected.
+
+### SRS is finalized after the prototype is ready.
+
+Pros:
+
+- Less technical risk.
+- Scope for accommodating new requirements.
+- A part of the product is visible at an early stage.
+
+Cons:
+
+- Expensive and time consuming.
+
+### (3) Iterative Enhancement Model
+
+This model delivers an operational quality product at each release, but one that satisfies only a subset of the customer's requirements.
+
+The complete product is divided into releases, and the developer delivers the product release by release.
+
+### (4) Evolutionary Development Model
+
+It resembles the Iterative Enhancement Model. This model differs from the Iterative Enhancement Model in the sense that it does not require a workable product at the end of each cycle.
+
+Here requirements are implemented by category rather than by priority.
+
+Example: GUI in first phase, queries in another.
+
+→ Useful for projects using new technology that is not well understood.
+
+### (5) Spiral Model
+
+This model is generally used when:
+
+- Many risks are expected.
+- At each stage of development, there are alternatives and we have to make right decisions.
+- Budget is not fixed for the project.
+
+Pros:
+
+- Model for other models.
+- Captures potential risks at an early stage.
+- Iterative and realistic model.
+
+Cons:
+
+- Requires good expertise in risk management and project planning.
+Projected cost is revisited and revised every round during planning.
+### (6) RAD (Rapid Application Development) Model
+
+This model is generally used when:
+
+- There are tight deadlines.
+- High pressure from customer.
+- Quick time to market.
+- There are many functionalities.
+- Users have to be involved throughout.
+
+→ Each major function is addressed by a separate RAD team.
+
+### (7) Agile Methodology
+Development team focuses on construction rather than design and documentation.
+Intended to deliver software quickly.
+
+### Software Requirements Analysis and Specifications
+- Requirements describe the "what" of a system, not the "how".
+- The input is the problem statement prepared by the customer.
+### Crucial Process Steps
+(i) Requirement Elicitation (Gathering)
+
+Requirements are identified with the help of customers and existing system processes.
+
+Use Case Diagrams, which are a combination of text and pictures, are used to improve the understanding of requirements.
+
+- Actor
+- Use-Case
+- Relationship between Actor & Use-Case
+## Types of Requirements
+### (i) Functional Requirements
+
+Describe what the software has to do. They are often called product features.
+
+### (ii) Non-Functional Requirements
+
+Describe how well the software does what it has to do.
+
+### (ii) Requirements Analysis
+
+Requirements are analysed in order to identify inconsistencies, defects, and ambiguities.
+
+Produces a structured requirements specification made of graphical notations.
+
+### (a) Data Flow Diagrams (DFDs)
+
+DFDs show the flow of data through a system.
+
+### (b) Entity Relationship Diagrams
+
+It is a detailed logical representation of the data for an organization.
+
+### (c) Data Dictionaries
+
+Data dictionaries are repositories to store information about all data items defined in DFDs.
+
+### (iii) Requirements Documentation
+
+This is the end product of requirement elicitation and analysis. The document is known as Software Requirements Specification (SRS).
+
+## SRS should address the following:
+- (a) Functionality
+
+What the software is supposed to do?
+
+- (b) External Interface
+
+How does the software interact with:
+
+- People
+- The system's hardware
+- Other hardware
+- Other software?
+
+## Software Requirements Specification (SRS)
+### (c) Performance
+
+What is the speed, availability, response time, recovery time, etc. of various software functions?
+
+### (d) Design Constraints
+
+Constraints imposed on an implementation such as:
+
+Implementation language
+Operating environment
+etc.
+### Characteristics of a Good SRS
+- Correct
+- Unambiguous
+- Complete
+- Consistent
+- Verifiable
+- Modifiable
+- Traceable
+## Notes
+- Acceptance Test Plan and System Test Plan are also generated in the requirements analysis phase.
+- SRS should not describe any design or implementation details.
+## Software Design
+### Design
+
+In this phase, the designer plans how a software system should be developed in order to make it:
+
+- Functional
+- Reliable
+- Understandable
+- Modifiable
+- Maintainable
+
+The purpose of the design phase is to produce a solution to a problem given in the SRS document.
+
+### Modularity
+
+Desirable properties of a modular system include:
+
+- Each module is a well-defined subsystem that is potentially useful in other applications.
+- Modules can be separately compiled and stored in a library.
+### Module Coupling
+
+Coupling is the measure of the degree of interdependence between modules.
+
+Loosely Coupled Systems: Made up of modules that are relatively independent.
+Highly Coupled Systems: Share a great deal of dependence between modules.
+Uncoupled Modules: Have no interconnections at all.
+## Important Point
+
+A good design will have low coupling. Therefore, interfaces should be carefully specified in order to keep the value of coupling low.
+
+## Types of Coupling
+
+### (i) Data Coupling:
+Module A and B communicate by only passing of data.
+
+### (ii) Stamp Coupling:
+Module A and B communicate by passing complete data structure.
+
+### (iii) Control Coupling:
+Module A and B communicate by passing of control information, i.e. flags.
+
+### (iv) External Coupling:
+A module has a dependency to other module, external to the software being developed.
+
+### (v) Common Coupling:
+Module A and B have shared data.
+
+### (vi) Content Coupling:
+When control is passed from one module to the middle of another.
+
+### Coupling Ranking:
+
+- Data Coupling — Best (Low)
+- Stamp Coupling
+- Control Coupling
+- External Coupling
+- Common Coupling
+- Content Coupling — Worst (High)
+### Module Cohesion
+
+Cohesion is a measure of the degree to which the elements of a module are functionally related.
+
+An important design objective is to maximize the module cohesion and minimize the module coupling.
+
+## Types of Cohesion
+
+Given a procedure that carries out operations X and Y, we can describe various forms of cohesion between X and Y:
+
+### (i) Functional Cohesion
+
+X and Y are part of a single functional task.
+
+### (ii) Sequential Cohesion
+
+X outputs some data which forms the input to Y.
+
+### (iii) Communicational Cohesion
+
+X and Y both operate on the same input data or contribute towards the same output data.
+
+### (iv) Procedural Cohesion
+
+It occurs in modules whose instructions, although accomplishing different tasks, have been combined because there is a specific order in which the tasks are to be completed.
 
