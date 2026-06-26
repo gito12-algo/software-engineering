@@ -382,3 +382,221 @@ Checking the software with respect to specifications.
 - The alpha test are conducted at the developer’s site by a customer.
 - The beta test are conducted by the customer at their site.
 
+### Unit Testing
+Tests the functionality within the module.
+### Integration Testing
+Tests are focused more on interaction between modules.
+### System Testing
+Tests the software as part of the bigger system for which it was created.
+### Regression Testing
+It consists of running the corrected system against tests which the program had already passed successfully to ensure that, in the process of modifying the existing system, the original functionality of the system was not disturbed.
+### Performance Testing
+Tests the non-functional requirements of the system.
+- (a) Load Testing
+Testing with many users accessing the system at the same time.
+- (b) Stress Testing
+Testing to identify the number of users the system can handle at a time before breaking down.
+- (c) Endurance Testing
+Testing for a long time for reliability.
+- (d) Spike Testing
+The system is stressed for a short duration.
+### Functional Testing
+Functional testing refers to testing which involves only observation of the output for certain input values. There is no attempt to analyse the code which produces the output.
+It is also referred to as Black Box Testing.
+### (i) Boundary Value Analysis
+The basic idea of boundary value analysis is to use input variable values at their:
+Minimum
+Just above minimum
+A nominal value
+Just below their maximum
+Maximum
+### (ii) Equivalence Class Testing
+In this method, the input domain of a program is partitioned into a finite number of equivalence classes such that one can reasonably assume that the test of a representative value of each class is equivalent to a test of any other value.
+
+That is, if one test case in a class detects an error, all other test cases in the class would be expected to find the same error. Conversely, if a test case did not detect an error, we would expect that no other test cases in the class would find an error.
+- The idea is to choose at least one element from each equivalence class.
+
+- We should not forget to have equivalence classes for invalid inputs.
+- Most of the time, equivalence class testing defines classes of the input domain. However, equivalence classes should also be defined for output domains.
+
+Example: Consider the program for the determination of the nature of roots of a quadratic equation. Identify the equivalence class test cases for the output domain.
+Solution: Output domain equivalence class test cases can be identified as follows:
+O₁ = {<a,b,c> : Not a quadratic equation if a = 0}
+O₂ = {<a,b,c> : Real roots if (b² − 4ac) > 0}
+O₃ = {<a,b,c> : Imaginary roots if (b² − 4ac) < 0}
+O₄ = {<a,b,c> : Equal roots if (b² − 4ac) = 0}
+Test Case
+a
+b
+c
+Expected Output
+1
+0
+50
+50
+Not a quadratic equation
+2
+1
+50
+50
+Real Roots
+3
+50
+50
+50
+Imaginary Roots
+4
+50
+100
+50
+Equal Roots
+### (ii) Decision Table Based Testing
+Decision tables are useful for describing situations in which a number of combinations of actions are taken under varying sets of conditions. They are used to represent and analyze complex logical relationships.
+Decision Table
+Condition Stub
+C₁
+C₂
+C₃
+Action Stub
+O₁
+O₂
+O₃
+O₄
+(The table shows different True/False combinations of conditions C₁, C₂, and C₃, with X marks indicating which actions occur.)
+When conditions C₁, C₂, and C₃ are all True, actions O₁ and O₂ occur.
+When conditions C₁ and C₂ are True and C₃ is False, actions O₂ and O₃ occur.
+This decision table is used to generate test cases.
+
+### Structural Testing
+A complementary approach to functional testing is called structural (white box) testing. It permits us to examine the internal structure of the program.
+### Static White Box Testing
+If we want to test the program without running it.
+### Dynamic White Box Testing
+If we want to test the program by running it.
+### Path Testing
+This type of testing involves:
+Generating a set of paths that will cover every branch in the program.
+Finding a set of test cases that will execute every path in the set of program paths.
+### Flow Graph
+The flow graph is a directed graph in which nodes are statements and edges represent the flow of control.
+(a) Sequence
+   ○
+   │
+   │
+   ○
+(b) If–Else Branches
+      ○
+     / \
+    ○   ○
+     \ /
+      ○
+(c) While Loop
+     ○
+     │
+     ○◄──┐
+     │   │
+     └───┘
+     │
+     ○
+(d) Do–While Loop
+     ○◄──┐
+     │   │
+     ○   │
+     │   │
+     ○───┘
+(e) Switch Statement
+        ○
+      / | \
+     ○  ○  ○
+      \ | /
+        ○
+### DD Path Graph
+The DD Path graph is known as the Decision-to-Decision Path graph.
+Here, we concentrate only on decision nodes. The nodes of a flow graph that are in sequence are combined into a single node.
+Hence, a DD Path graph is a directed graph in which nodes are sequences of statements and edges represent control flow between nodes.
+### Independent Paths
+An independent path is any path through the DD Path graph that introduces at least one new set of processing statements or a new condition.
+An independent path must move along at least one edge that has not been traversed before the path is defined.
+We are interested in executing all independent paths at least once during path testing.
+
+### Example: Flow Graph
+(1) ─→ (2) ─→ (3) ─→ (4) ─→ (5)
+                              │
+                              ▼
+                             (6)
+                           ↙️     ↘️
+                         (7)     (12)
+                          │        │
+                         (8)       │
+                       ↙️    │       │
+                     (9)   (11)     │
+                      │      ↘️      │
+                    (10)      ↘️     │
+                       ↘️       ▼    ▼
+                             (13)
+                               │
+                             (14)
+                              Exit
+### DD Path Graph
+      A
+      │
+      B
+    ↙️ │
+   C  │
+   │  │
+   D  │
+ ↙️ │  │
+E  │  │
+ \ │  │
+  F  │
+   \ │
+     G
+     │
+     H
+### Independent Paths are:
+- (1)ABGH
+- (2)ABCDFGH
+- (3)ABCDEFGH
+### Cyclomatic Complexity
+- It provides a quantitative measure of the logical complexity of a program.
+Cyclomatic Complexity is also known as Structural Complexity. This approach is used to find the number of independent paths through a program.
+- (1) Formula
+For a graph G with n vertices, e edges, and k connected components,
+```
+Cyclomatic Complexity V(G)= e -n + 2k
+```
+- (2) Predicate Node Formula
+Cyclomatic complexity of a flow graph is equal to the number of predicate (decision) nodes plus one.
+```
+V(G)= Pi + 1
+```
+where P = Number of Predicate Nodes
+- (3) Region Formula
+Cyclomatic Complexity is equal to the number of regions of the flow graph.
+Example
+Flow Graph
+        A
+        │
+        B
+      ↙️   ↘️
+     C     D
+      \   / \
+       E     F
+       │\   /
+       │ G
+       │ │
+       │ H
+      ↙️   ↘️
+     I ───► J
+Calculation
+(1) V(G) = e -n + 2k
+       =13 - 10 +2(1)=5
+(2) V(G) = Pi + 1
+        = 4 + 1 =5
+(3) V(G) = Number og Regions = 5
+### Independent Paths
+- 1.ABCEGHIJ
+- 2.ABCBEGHIJ
+- 3.ABDEGHIJ
+- 4.ABDFGIJ
+- 5. ABDFG
