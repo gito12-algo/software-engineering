@@ -600,3 +600,61 @@ Calculation
 - 3.ABDEGHIJ
 - 4.ABDFGIJ
 - 5. ABDFG
+
+### Defect Detection using Reviews
+Definition:
+Examination of software work products by the author's peers to identify defects and areas where changes are required.
+### Pros:
+- 100% code coverage.
+- 2 to 5 times more defects can be detected.
+- Mix of errors like maintainability issues can be detected.
+### Testing and the Life Cycle
+Phase
+Deliverables
+(1) Requirement Analysis
+User acceptance plan & System test plan
+(2) HLD (High Level Design)
+Integration Test Plan
+(3) DLD (Detailed Level Design)
+Unit Test Plan
+(4) Coding
+Unit tested code
+(5) Testing
+Integration & System tested code
+(6) Acceptance
+Sign-off by the customer
+### Note:
+It is better to prevent the injection of defects rather than finding them and fixing them.
+### Integration Testing
+(1) Top Down
+- Top-level modules are developed and tested first.
+Dummy bottom-level module called "Stub" is required.
+(2) Bottom Up
+- Bottom-level modules are developed and tested first.
+Dummy top-level module called "Driver" is required.
+(3) Sandwich
+- Combines both bottom-up and top-down integration.
+- A layer is identified in between.
+- Above this layer, the Top-Down approach is followed, and below this layer, the Bottom-Up approach is followed.
+(4) Big Bang
+- Test all modules independently and then integrate the modules to form the software.
+- The integrated software is tested as a whole.
+## Note:
+The Testing phase requires the largest manpower.
+
+### Maintenance:-
+​Software maintenance is a broad activity that includes error corrections, enhancements of capabilities, deletion of obsolete capabilities, and optimization.
+Any work done to change the software after it is in operation is considered to be maintenance work.
+## ​Types of Maintenance:-
+### ​(1) Corrective Maintenance:-
+- This refers to modifications initiated by defects in the software.
+### ​(2) Adaptive Maintenance:-
+- It includes modifying the software to match changes in the ever-changing environment.
+### ​(3) Perfective Maintenance:-
+- It means improving processing efficiency or performance, or restructuring the software to improve changeability.
+​### (4) Preventive Maintenance:-
+- There are long term effects of corrective, adaptive and perfective changes. This leads to increase in the complexity of the software. The work is required to be done to maintain it or to reduce it. This work may be named as preventive maintenance.
+### ​Software Configuration Management:-
+​A Software Configuration Management tool helps in maintaining different versions of the configurable items.
+Example – VSS.
+​Website watermark in the middle of the right page:
